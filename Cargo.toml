@@ -4,4 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-libc = "0.2.176"
+libc = "0.2.151"
+
+[patch.crates-io]
+# libc = { git = "https://github.com/thenotary/libc", branch = "allow-basic-tcgetattr" }
+libc = { path = "../../open_source/libc" }

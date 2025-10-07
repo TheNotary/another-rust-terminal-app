@@ -1,6 +1,6 @@
+use libc::{ECHO, ICANON, NCCS, TCSANOW, tcgetattr, tcsetattr, termios};
 use std::io::{self, Read};
 use std::os::unix::io::AsRawFd;
-use libc::{tcgetattr, tcsetattr, termios, ICANON, ECHO, TCSANOW};
 
 fn main() -> io::Result<()> {
     let stdin = io::stdin();
@@ -12,8 +12,7 @@ fn main() -> io::Result<()> {
         c_oflag: 0,
         c_cflag: 0,
         c_lflag: 0,
-        // c_line: 0,
-        c_cc: [0; 20],
+        c_cc: [0; NCCS],
         c_ispeed: 0,
         c_ospeed: 0,
     };
