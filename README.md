@@ -1,7 +1,6 @@
 # Another Rust Terminal App 
 
-Testing Making Rust and Terminal in Raw Mode...
-
+Testing Making Rust and Terminal work in "Raw Mode" where keystrokes are responded to immediately and don't require the user to press the enter key.
 
 ## Creating Project
 
@@ -19,8 +18,13 @@ cargo install cargo-wasix
 cargo run
 ```
 
-
 ## Run Wasmerly
+
+```
+cargo wasix run
+```
+
+## Setup a Release
 
 ```
 cargo wasix build --release

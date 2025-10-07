@@ -12,3 +12,4 @@ dependencies = [
 [[package]]
 name = "libc"
 version = "0.2.151"
+source = "git+https://github.com/thenotary/libc?branch=allow-basic-tcgetattr#c557b7697b455a015fbfd3f2772042ed3e18aef1"
