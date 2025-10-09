@@ -1,21 +1,14 @@
-use libc::{ECHO, ICANON, NCCS, TCSANOW, tcgetattr, tcsetattr, termios};
+use libc::{ECHO, ICANON, TCSANOW, tcgetattr, tcsetattr, termios};
 use std::io::{self, Read};
 use std::os::unix::io::AsRawFd;
+use std::mem;
 
 fn main() -> io::Result<()> {
     let stdin = io::stdin();
     let fd = stdin.as_raw_fd();
 
     // Save current terminal settings
-    let mut oldt = termios {
-        c_iflag: 0,
-        c_oflag: 0,
-        c_cflag: 0,
-        c_lflag: 0,
-        c_cc: [0; NCCS],
-        c_ispeed: 0,
-        c_ospeed: 0,
-    };
+    let mut oldt: termios = unsafe { mem::zeroed() };
     unsafe {
         tcgetattr(fd, &mut oldt);
     }
