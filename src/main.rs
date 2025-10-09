@@ -21,8 +21,9 @@ fn main() -> io::Result<()> {
         tcsetattr(fd, TCSANOW, &newt);
     }
 
-    // Read one character (no Enter required)
+    // Block here until the next character to read from stdin is pressed
     let ch = io::stdin().bytes().next().unwrap()?; // read 1 byte
+
     println!("\nYou pressed: {}", ch as char);
 
     // Restore terminal settings
