@@ -1,7 +1,7 @@
 [package]
-name = "thenotary/rust-terminal-game"
+name = 'thenotary/rust-terminal-game'
 version = '0.1.0'
-entrypoint = "another-terminal-game"
+entrypoint = 'another-terminal-game'
 
 # See more keys and definitions at https://docs.wasmer.io/registry/manifest
 
@@ -16,4 +16,4 @@ module = 'another-terminal-game'
 runner = "https://webc.org/runner/wasi"
 
 [command.annotations.wasi]
-atom = "another-terminal-game"
+atom = 'another-terminal-game'
