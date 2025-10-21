@@ -1,17 +1,17 @@
 [package]
-name = "thenotary/rust-terminal-game"
-version = "0.1.2"
+name = "thenotary/rust-terminal-app"
+version = "0.1.0"
 description = "This repo is a POC for validating changes to wasix-org/libc used to target wasix for rust builds"
 readme = "./README.md"
 repository = "https://github.com/thenotary/poc-another-rust-terminal-app"
 homepage = "https://github.com/thenotary/poc-another-rust-terminal-app"
-entrypoint = "another-terminal-game"
+entrypoint = "another-terminal-app"
 
 [[module]]
-name = "another-terminal-game"
+name = "another-terminal-app"
 source = "./target/wasm32-wasmer-wasi/release/app.wasm"
 
 [[command]]
-name = "another-terminal-game"
-module = "another-terminal-game"
+name = "another-terminal-app"
+module = "another-terminal-app"
 runner = "https://webc.org/runner/wasi"
