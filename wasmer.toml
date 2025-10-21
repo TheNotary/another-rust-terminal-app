@@ -2,18 +2,20 @@
 name = 'thenotary/rust-terminal-game'
 version = '0.1.0'
 entrypoint = 'another-terminal-game'
+description = 'This repo is a POC for validating changes to wasix-org/libc used to target wasix for rust builds'
+readme = './README.md'
+repository = 'https://github.com/thenotary/poc-another-rust-terminal-app'
 
 # See more keys and definitions at https://docs.wasmer.io/registry/manifest
 
 [[module]]
 name = 'another-terminal-game'
+source = './target/wasm32-wasmer-wasi/release/app.wasm'
 #source = './target/wasm32-wasip1/debug/rust-terminal-game.wasm'
-source = './target/wasm32-wasmer-wasi/release/another-rust-terminal-app.wasm'
+#source = './target/wasm32-wasmer-wasi/release/another-rust-terminal-app.wasm'
 
 [[command]]
 name = 'another-terminal-game'
 module = 'another-terminal-game'
 runner = "https://webc.org/runner/wasi"
 
-[command.annotations.wasi]
-atom = 'another-terminal-game'

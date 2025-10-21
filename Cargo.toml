@@ -3,6 +3,11 @@ name = "another-rust-terminal-app"
 version = "0.1.0"
 edition = "2024"
 
+# This let's you set the name of the binary to be `app` which helps with writing universal Dockerfiles
+[[bin]]
+name = "app"
+path = "src/main.rs"
+
 [dependencies]
 libc = "0.2.151"
 
