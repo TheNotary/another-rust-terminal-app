@@ -1,6 +1,6 @@
 [package]
 name = "thenotary/rust-terminal-game"
-version = "0.1.1"
+version = "0.1.2"
 description = "This repo is a POC for validating changes to wasix-org/libc used to target wasix for rust builds"
 readme = "./README.md"
 repository = "https://github.com/thenotary/poc-another-rust-terminal-app"
