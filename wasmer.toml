@@ -4,6 +4,7 @@ version = "0.1.1"
 description = "This repo is a POC for validating changes to wasix-org/libc used to target wasix for rust builds"
 readme = "./README.md"
 repository = "https://github.com/thenotary/poc-another-rust-terminal-app"
+homepage = "https://github.com/thenotary/poc-another-rust-terminal-app"
 entrypoint = "another-terminal-game"
 
 [[module]]
